@@ -60,7 +60,7 @@ const works = [
         "description": "Created a map for a game im making"
     },
     {
-        "type": "video",
+        "type": "mp4",
         "image": "media/0001-1280.mp4",
         "title": "Product Demo",
         "description": "Second paid work i did Commissioned by students for their school project"

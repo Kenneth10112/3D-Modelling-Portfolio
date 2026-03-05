@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    /* Deep charcoal background */
+    background-color: #1a1a1a; 
+    color: #eeeeee; /* Light grey text for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-flow: column;
+}
+
+#header {
+    padding: 40px 20px;
+    /* Slightly lighter than body to create depth */
+    background-color: #242424; 
+    border-bottom: 1px solid #333;
+}
+
+#header h1 {
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+}
+
+#mainContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    /* Fixed: grid-auto-rows does not use 'repeat' */
+    grid-auto-rows: 450px; 
+    
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    /* Soft slate grey */
+    background-color: #2a2a2a; 
+    border: 1px solid #383838;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Subtle lift effect on hover */
+.itemContainer:hover {
+    background-color: #333333;
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.imgContainer {
+    flex-grow: 1; /* Makes the image area fill available space */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #121212; /* "Letterbox" color for images */
+}
+
+.imgContainer img,
+.imgContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
